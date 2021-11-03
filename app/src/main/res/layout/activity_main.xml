@@ -52,12 +52,9 @@
                 android:id="@+id/articleComment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:editable="true"
-                android:ems="12"
-                android:enabled="false"
-                android:importantForAutofill="no"
+                android:enabled="true"
                 android:inputType="text"
-                android:minHeight="40dp"
+                android:visibility="invisible"
                 tools:ignore="Deprecated,LabelFor,SpeakableTextPresentCheck" />
 
             <LinearLayout
@@ -70,18 +67,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="Add_Comment"
-                    android:text="@string/comment"/> />
+                    android:text="@string/comment"/>
 
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/textComment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=""
-                android:textSize="40dp"/>
-
 
         </LinearLayout>
     </ScrollView>

@@ -19,24 +19,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Add_Comment(View view) {
-        Button but = findViewById(R.id.new_commentary);
+        Button boton = findViewById(R.id.new_commentary);
         EditText editText = (EditText) findViewById(R.id.articleComment);
         TextView txt = (TextView) findViewById(R.id.article);
-        but.setText("Send");
+        boton.setText("Send");
         editText.setVisibility(view.VISIBLE);
-        but.setOnClickListener(new View.OnClickListener() {
+        boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (but.getText() == "Send") {
+                if (boton.getText() == "Send") {
                     String oldText = txt.getText().toString();
                     String comment = editText.getText().toString();
 
-                    txt.setText(oldText + "\n" + "\n" + "Comment:" + " : " + comment + "\n");
-                    but.setText("Add Comment");
+                    txt.setText(oldText + "\n" + "\n" + "Comment" + " : " + comment + "\n");
+                    boton.setText("Add Comment");
                     editText.setVisibility(view.INVISIBLE);
                 } else {
                     editText.setVisibility(View.VISIBLE);
-                    but.setText("Send");
+                    boton.setText("Send");
                 }
             }
         });
