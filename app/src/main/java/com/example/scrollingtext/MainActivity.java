@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    int num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
                 if (but.getText() == "Send") {
                     String oldText = txt.getText().toString();
                     String comment = editText.getText().toString();
-                    num++;
-                    txt.setText(oldText + "\n" + "\n" + "Comment_" + num + " : " + comment + "\n");
+
+                    txt.setText(oldText + "\n" + "\n" + "Comment:" + " : " + comment + "\n");
                     but.setText("Add Comment");
                     editText.setVisibility(view.INVISIBLE);
                 } else {
